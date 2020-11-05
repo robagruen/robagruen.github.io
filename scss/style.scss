@@ -1,0 +1,53 @@
+@import '_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/**
+ * Site Styles
+ */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+a {
+    color: $white;
+    &:hover, &:focus {
+        text-decoration: none;
+        color: rgba($white, 0.8);
+        transition: all 5s;
+        outline: none;
+    }
+    &:active, &:visited {
+        color: $white;
+    }
+}
+
+#box {
+    width: 500px;
+    height: 500px;
+    border: solid 5px rgba($white, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.arrow_container {
+    display: flex;
+    justify-content: center;
+}
+
+.icon_arrow {
+    width: 50px;
+}
