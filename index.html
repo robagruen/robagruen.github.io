@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello!  My name is Rob 🍍</title>
+    <title>Hello!  My name is Rob</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div>
         <div class="arrow_container">
-            <img src="./icons/keyboard_arrow_up.svg" class="icon_arrow" alt="">
+            <button class="arrow_btn" id="arrow_up">
+                <img src="./icons/keyboard_arrow_up.svg" class="arrow_icon" alt="">
+            </button>
         </div>
         <div class="arrow_container">
-            <img src="./icons/keyboard_arrow_left.svg" class="icon_arrow" alt="">
+            <button class="arrow_btn" id="arrow_left">
+                <img src="./icons/keyboard_arrow_left.svg" class="arrow_icon" alt="">
+            </button>
             <main id="box">
-                <h1>Hello!  My name is Rob</h1>
-                <p>Hi there! I'm a front end web developer. You can see some of my personal work on <a href="https://github.com/robagruen" target="_blank">GitHub</a>.  If you want to get in touch please feel free to <a href="mailto:rgruen@live.com">contact me</a>!</p>
+                <div class="box_side active" id="front">
+                    <h1>Hello!  My name is Rob</h1>
+                    <p>Hi there! I'm a front end web developer. You can see some of my personal work on <a href="https://github.com/robagruen" target="_blank">GitHub</a>.  If you want to get in touch please feel free to <a href="mailto:rgruen@live.com">contact me</a>!</p>
+                </div>
+                <div class="box_side" id="sides">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="box_side" id="top">
+                    <h2>Top</h2>
+                </div>
+                <div class="box_side" id="bottom">
+                    <h2>Bottom</h2>
+                </div>
             </main>
-            <img src="./icons/keyboard_arrow_right.svg" class="icon_arrow" alt="">
+            <button class="arrow_btn" id="arrow_right">
+                <img src="./icons/keyboard_arrow_right.svg" class="arrow_icon" alt="">
+            </button>
         </div>
         <div class="arrow_container">
-            <img src="./icons/keyboard_arrow_down.svg" class="icon_arrow" alt="">
+            <button class="arrow_btn" id="arrow_down">
+                <img src="./icons/keyboard_arrow_down.svg" class="arrow_icon" alt="">
+            </button>
         </div>
     </div>
 </body>

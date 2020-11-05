@@ -12,7 +12,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,15 +31,42 @@ a {
     }
 }
 
+/**
+ * Box Styles
+ */
 #box {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
+}
+
+.box_side {
+    width: 400px;
+    height: 400px;
     border: solid 5px rgba($white, 0.25);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 15px;
+    position: absolute;
+    box-sizing: border-box;
+    &.active {
+        display: flex;
+        animation: rotateRightX 2s linear;
+    }
+}
+
+#sides {
+    transform: rotateY(180deg);
+}
+
+#top {
+    transform: rotateX(180deg);
+}
+
+#bottom {
+    transform: rotateX(-180deg);
 }
 
 .arrow_container {
@@ -48,6 +74,35 @@ a {
     justify-content: center;
 }
 
-.icon_arrow {
+.arrow_btn {
+    appearance: none;
+    background: none;
+    border: none;
+}
+
+.arrow_icon {
     width: 50px;
+}
+
+/**
+ * Animations
+ */
+@keyframes rotateDownY {
+    from { transform: rotateInY(180deg); }
+    to { transform: rotateInY(0deg); }
+}
+
+@keyframes rotateUpY {
+    from { transform: rotateInY(0deg); }
+    to { transform: rotateInY(180deg); }
+}
+
+@keyframes rotateRightX {
+    from { transform: rotateInX(180deg); }
+    to { transform: rotateInX(0deg); }
+}
+
+@keyframes rotateLeftX {
+    from { transform: rotateInX(0deg); }
+    to { transform: rotateInX(180deg); }
 }
