@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,20 +54,21 @@ a {
     box-sizing: border-box;
     &.active {
         display: flex;
-        animation: rotateRightX 2s linear;
+        animation: rotateUpY 3s linear;
+        animation-delay: 1s;
     }
 }
 
 #sides {
-    transform: rotateY(180deg);
+    transform: rotateY(90deg);
 }
 
 #top {
-    transform: rotateX(180deg);
+    transform: rotateX(90deg);
 }
 
 #bottom {
-    transform: rotateX(-180deg);
+    transform: rotateX(-90deg);
 }
 
 .arrow_container {
@@ -78,6 +80,7 @@ a {
     appearance: none;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .arrow_icon {
@@ -88,21 +91,21 @@ a {
  * Animations
  */
 @keyframes rotateDownY {
-    from { transform: rotateInY(180deg); }
+    from { transform: rotateInY(90deg); }
     to { transform: rotateInY(0deg); }
 }
 
 @keyframes rotateUpY {
     from { transform: rotateInY(0deg); }
-    to { transform: rotateInY(180deg); }
+    to { transform: rotateInY(90deg); }
 }
 
 @keyframes rotateRightX {
-    from { transform: rotateInX(180deg); }
+    from { transform: rotateInX(90deg); }
     to { transform: rotateInX(0deg); }
 }
 
 @keyframes rotateLeftX {
     from { transform: rotateInX(0deg); }
-    to { transform: rotateInX(180deg); }
+    to { transform: rotateInX(90deg); }
 }
