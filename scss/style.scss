@@ -1,111 +1,152 @@
-@import '_variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import "_reset.scss";
+@import "_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 /**
  * Site Styles
  */
 body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 a {
+  color: $white;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: rgba($white, 0.8);
+    transition: all 5s;
+    outline: none;
+  }
+  &:active,
+  &:visited {
     color: $white;
-    &:hover, &:focus {
-        text-decoration: none;
-        color: rgba($white, 0.8);
-        transition: all 5s;
-        outline: none;
-    }
-    &:active, &:visited {
-        color: $white;
-    }
+  }
 }
 
 /**
  * Box Styles
  */
 #box {
-    width: 400px;
-    height: 400px;
+  width: 400px;
+  height: 400px;
 }
 
 .box_side {
-    width: 400px;
-    height: 400px;
-    border: solid 5px rgba($white, 0.25);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    position: absolute;
-    box-sizing: border-box;
-    &.active {
-        display: flex;
-        animation: rotateUpY 3s linear;
-        animation-delay: 1s;
-    }
+  width: 400px;
+  height: 400px;
+  border: solid 5px rgba($white, 0.25);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  box-sizing: border-box;
+  &.active {
+    display: flex;
+    animation-duration: 1s;
+    transform: rotate(0deg) !important;
+  }
 }
 
 #sides {
-    transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
 #top {
-    transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 
 #bottom {
-    transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 .arrow_container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .arrow_btn {
-    appearance: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .arrow_icon {
-    width: 50px;
+  width: 50px;
 }
 
 /**
  * Animations
  */
-@keyframes rotateDownY {
-    from { transform: rotateInY(90deg); }
-    to { transform: rotateInY(0deg); }
+@keyframes rotateLeftIn {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
 
-@keyframes rotateUpY {
-    from { transform: rotateInY(0deg); }
-    to { transform: rotateInY(90deg); }
+@keyframes rotateRightOut {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
 }
 
-@keyframes rotateRightX {
-    from { transform: rotateInX(90deg); }
-    to { transform: rotateInX(0deg); }
+@keyframes rotateLeftOut {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-90deg);
+  }
 }
 
-@keyframes rotateLeftX {
-    from { transform: rotateInX(0deg); }
-    to { transform: rotateInX(90deg); }
+@keyframes rotateRightIn {
+  from {
+    transform: rotateY(-90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes rotateUpIn {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes rotateDownOut {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(90deg);
+  }
 }
