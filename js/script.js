@@ -15,22 +15,22 @@ function showBoxSide(e) {
   switch (id) {
     case "arrow_left":
       animationName = "rotateLeftOut";
-      altAnimationName = "rotateRightIn";
+      altAnimationName = "rotateLeftIn";
       newSide = document.getElementById("sides");
       break;
     case "arrow_right":
       animationName = "rotateRightOut";
-      altAnimationName = "rotateLeftIn";
+      altAnimationName = "rotateRightIn";
       newSide = document.getElementById("sides");
       break;
     case "arrow_up":
-      animationName = "rotateRightOut";
-      altAnimationName = "rotateLeftIn";
+      animationName = "rotateUpOut";
+      altAnimationName = "rotateUpIn";
       newSide = document.getElementById("top");
       break;
     case "arrow_down":
-      animationName = "rotateRightOut";
-      altAnimationName = "rotateLeftIn";
+      animationName = "rotateDownOut";
+      altAnimationName = "rotateDownIn";
       newSide = document.getElementById("bottom");
       break;
   }
@@ -39,9 +39,9 @@ function showBoxSide(e) {
   setTimeout(function() {
     current.classList.remove("active");
     newSide.classList.add("active");
-    current.style.animationName = altAnimationName;
+    newSide.style.animationName = altAnimationName;
     generateRandomColor();
-  }, 1000);
+  }, 750);
 }
 
 window.onload = function () {
